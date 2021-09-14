@@ -1,0 +1,7 @@
+.messeges {
+  position: absolute;
+  width: 95vw;
+  height: 90vh;
+  overflow: auto;
+}
+
