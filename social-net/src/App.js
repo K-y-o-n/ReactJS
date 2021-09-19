@@ -1,5 +1,6 @@
-import Messege from './Components/Messege/Messege';
+import Messeges from './Components/Messeges/Messeges';
 import InputForm from './Components/InputForm/InputForm';
+import Chats from "./Components/Chats/Chats";
 import { useEffect, useState } from "react";
 import './App.css';
 
@@ -20,8 +21,11 @@ function App() {
 
   return (
     <div className="App">
-      <Messege messageList={messageList} />
-      <InputForm setMessageList={setMessageList} />
+      <Chats />
+      <>
+        <Messeges messageList={messageList} />
+        <InputForm setMessageList={setMessageList} />
+      </>
     </div>
   );
 }
