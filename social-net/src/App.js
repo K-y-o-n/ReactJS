@@ -1,8 +1,4 @@
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Header from "./Components/Header/Header";
-import Profile from "./Components/Profile/Profile";
-import Chats from "./Components/Chats/Chats";
-import ChatMesseges from "./Components/ChatMesseges/ChatMesseges";
+import Router from "./Components/Router/Router";
 
 function App() {
   // const [messageList, setMessageList] = useState([
@@ -27,20 +23,7 @@ function App() {
   //   }
   // }, [messageList]);
 
-  return (
-    <div className="App">
-      <Router>
-        <Route exact path="/" component={Header}></Route>
-        <Route exact path="/profile" component={Profile}></Route>
-        <Route exact path="/chats">
-          <Chats />
-        </Route>
-        <Route exact path="/chats/:id">
-          <ChatMesseges />
-        </Route>
-      </Router>
-    </div>
-  );
+  return <Router />;
 }
 
 export default App;
