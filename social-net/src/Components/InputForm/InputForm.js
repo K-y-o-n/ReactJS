@@ -1,11 +1,14 @@
 import { memo, useEffect, useRef, useState } from "react";
 import { TextField, Button } from "@material-ui/core";
 import "./module.inputForm.css";
+import { useSelector, useDispatch, shallowEqual } from "react-redux";
+import addMessage from "../../action/messagesActions";
 
-function InputForm({ setMessageList }) {
+function InputForm({ chatId }) {
   const inputRef = useRef();
-  const [nameValue, setNameValue] = useState("");
   const [textValue, setTextValue] = useState("");
+  const author = useSelector((state) => state.profile.name, shallowEqual);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     inputRef.current?.focus();
@@ -13,24 +16,16 @@ function InputForm({ setMessageList }) {
 
   function submitHandler(e) {
     e.preventDefault();
-    setMessageList((prev) => [...prev, { author: nameValue, text: textValue }]);
+    dispatch(addMessage(chatId, textValue, author));
     setTextValue("");
   }
 
   return (
     <form className="form">
       <TextField
-        id="filled-basic-small"
-        label="Ваше имя"
-        variant="filled"
-        size="small"
-        required
-        className="form__name"
-        type="text"
-        value={nameValue}
-        onChange={(e) => setNameValue(e.target.value)}
-      ></TextField>
-      <TextField
+        sx={{
+          width: 500,
+        }}
         id="filled-basic-small"
         label="Сообщение"
         variant="filled"

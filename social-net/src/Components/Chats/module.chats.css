@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+.delete-chat {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  font-weight: bold;
+  font-size: 1.3em;
+}

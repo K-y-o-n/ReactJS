@@ -1,7 +1,6 @@
-.messeges {
+.messages {
   position: absolute;
   width: 95vw;
-  height: 88vh;
+  height: 82vh;
   overflow: auto;
 }
-
