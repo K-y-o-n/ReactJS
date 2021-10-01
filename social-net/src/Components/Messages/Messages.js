@@ -1,23 +1,14 @@
 import "./module.messages.css";
-import { useDispatch, useSelector, shallowEqual } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-import addMessage from "../../action/messagesActions";
+import { botReply } from "../../action/messagesActions";
 
-function Messages({ chatId }) {
-  const messages = useSelector(
-    (state) => state.messages.messageList[chatId],
-    shallowEqual
-  );
-
+function Messages({ chatId, messages }) {
   const dispatch = useDispatch();
 
   useEffect(() => {
     if (chatId === "id0" && messages[messages.length - 1].author !== "ГЛаДОС") {
-      setTimeout(() => {
-        dispatch(
-          addMessage(chatId, "Отступитесь, и вам принесут тортик.", "ГЛаДОС")
-        );
-      }, 2000);
+      dispatch(botReply(chatId));
     }
   }, [messages]);
 
