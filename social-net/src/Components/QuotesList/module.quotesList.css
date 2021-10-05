@@ -1,0 +1,11 @@
+.quotes {
+  position: absolute;
+  width: 99vw;
+  height: 87vh;
+  overflow: auto;
+}
+
+.quotes__p {
+  margin-left: 20px;
+  font-style: italic;
+}

@@ -14,6 +14,7 @@ import Header from "../Header/Header";
 import "./module.chats.css";
 
 function Chats() {
+  document.title = "Чаты";
   const [visible, setVisible] = useState(false);
   const [newChatName, setNewChatName] = useState("");
 

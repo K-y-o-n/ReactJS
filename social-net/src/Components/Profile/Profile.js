@@ -8,6 +8,8 @@ function Profile() {
   const dispatch = useDispatch();
   const [value, setValue] = useState("");
 
+  document.title = "Профиль";
+
   function submitHandler(e) {
     e.preventDefault();
     dispatch(setName(value));
@@ -18,7 +20,7 @@ function Profile() {
     <>
       <Header />
       <div>
-        <h4>Profile</h4>
+        <h4>Профиль</h4>
       </div>
       <div>{name}</div>
       <div>

@@ -3,6 +3,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import profileReducer from "./profileReducer";
 import chatsReducer from "./chatsReducer";
 import messagesReducer from "./messagesReducer";
+import quotesReducer from "./quotesReducer";
 import thunk from "redux-thunk";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage"; // localStorage
@@ -11,12 +12,14 @@ import storage from "redux-persist/lib/storage"; // localStorage
 const persistConfig = {
   key: "socialNet",
   storage,
+  blacklist: ["quotes"],
 };
 
 const rootReducer = combineReducers({
   profile: profileReducer,
   chats: chatsReducer,
   messages: messagesReducer,
+  quotes: quotesReducer,
 });
 
 // оборачиваем редьюсеры в persist

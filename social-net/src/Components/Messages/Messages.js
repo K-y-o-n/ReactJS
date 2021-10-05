@@ -17,7 +17,9 @@ function Messages({ chatId, messages }) {
       {messages
         ? messages.map((el) => (
             <li key={el.id} className="messages__item">
-              <p className="messages__item-name">{el.author + " говорит:"}</p>
+              <p className="messages__item-name">
+                <b>{el.author}</b> говорит:
+              </p>
               <p className="messages__item-text">{el.text}</p>
             </li>
           ))

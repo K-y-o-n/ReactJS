@@ -10,6 +10,9 @@ function Header() {
         <li>
           <Link to="/chats">Чаты</Link>
         </li>
+        <li>
+          <Link to="/quotes">Аниме цитаты</Link>
+        </li>
       </ul>
     </header>
   );

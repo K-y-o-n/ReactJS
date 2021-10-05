@@ -16,13 +16,14 @@ function ChatPage() {
     (state) => state.messages.messageList[chatId],
     shallowEqual
   );
+  document.title = `${currentChat.name}`;
 
   return (
     <>
       {currentChat ? (
         <>
           <Header />
-          <p>{currentChat.name}</p>
+          <h3>{currentChat.name}</h3>
           <Messages chatId={chatId} messages={messages} />
           <InputForm chatId={chatId} author={author} />
         </>
