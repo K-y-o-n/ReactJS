@@ -7,6 +7,7 @@ import quotesReducer from "./quotesReducer";
 import thunk from "redux-thunk";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage"; // localStorage
+import userReducer from "./userReducer";
 
 // создаем объект конфигурации для persist
 const persistConfig = {
@@ -20,6 +21,7 @@ const rootReducer = combineReducers({
   chats: chatsReducer,
   messages: messagesReducer,
   quotes: quotesReducer,
+  user: userReducer,
 });
 
 // оборачиваем редьюсеры в persist

@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.123);
+}
+
+.header__links {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style-type: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.header__links > *:not(:last-of-type) {
+  margin-right: 10px;
+}
+
+.header__authBtns {
+  margin-right: 20px;
+}
+
+.header__authBtns > *:not(:last-of-type) {
+  margin-right: 10px;
+}
