@@ -1,0 +1,6 @@
+.messages {
+  position: absolute;
+  width: 99vw;
+  height: 80vh;
+  overflow: auto;
+}
