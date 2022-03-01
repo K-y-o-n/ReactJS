@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+
+.App::before {
+  content: url("https://1.bp.blogspot.com/-sRC_4EBR7LI/VvyKy1U3XtI/AAAAAAAAALY/jsbyYNGmpbINDci5yLFvvT9zXgjz0rNlg/s1600/%25D0%25B4%25D0%25B2%25D0%25B8%25D0%25B3%25D0%25B0%25D0%25B5%25D1%2582%25D1%2581%25D1%258F%2B0.gif");
+  display: block;
+}
+
+
+
+
+
+

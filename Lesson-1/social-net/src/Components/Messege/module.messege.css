@@ -1,0 +1,5 @@
+.msg {
+  color: red;
+  font-size: 30px;
+  -webkit-text-stroke: 0.5px #000000;
+}
